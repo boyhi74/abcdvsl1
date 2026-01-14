@@ -42,13 +42,16 @@ xxd -l 40 final.jpg
 
 📌 Salted__ là signature của openssl enc
 Payload bắt đầu sau 4 byte.
+
 dd if=final.jpg of=app15_payload.bin bs=1 skip=24 count=393 status=none
+
 xxd -l 32 app15_payload.bin
 
 <img width="724" height="440" alt="image" src="https://github.com/user-attachments/assets/3fb51a5d-85bf-4d79-aca0-1f04b3ccb376" />
 
 ## Bỏ “LV4APP15|” để lấy blob thật
 Cắt bỏ 9 byte đầu:
+
 dd if=app15_payload.bin of=blob.bin bs=1 skip=9 status=none
 
 <img width="688" height="347" alt="image" src="https://github.com/user-attachments/assets/3811c64f-3eb5-48cf-be69-cd72e4dcf59b" />
