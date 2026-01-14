@@ -21,6 +21,7 @@ SOF0:
 
 sử dụng hexedit để chỉnh sửa
 hexedit final.jpg
+
 Đổi thành:
 `01 A1`
 `| Dữ liệu ảnh bên dưới vẫn tồn tại nhưng bị che bởi SOF0 height override`
