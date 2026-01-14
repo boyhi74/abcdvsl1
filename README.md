@@ -18,6 +18,7 @@ SOF0:
 `FF C0 .... 01 2C`
 
 <img width="642" height="449" alt="image" src="https://github.com/user-attachments/assets/9924826f-de7a-424b-b386-087143d7bdd1" />
+
 sử dụng hexedit để chỉnh sửa
 hexedit final.jpg
 Đổi thành:
