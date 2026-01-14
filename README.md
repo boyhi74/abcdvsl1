@@ -39,6 +39,7 @@ Tìm marker:
 grep -aobU $'\xFF\xEF' final.jpg
 Xem header:
 xxd -l 40 final.jpg
+
 📌 Salted__ là signature của openssl enc
 Payload bắt đầu sau 4 byte.
 dd if=final.jpg of=app15_payload.bin bs=1 skip=24 count=393 status=none
