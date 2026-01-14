@@ -56,6 +56,7 @@ unzip recovered.zip
 
 ## 🔎 5. Flag
 echo "$(cat p1.txt)$(cat p2.txt)" | xxd -r -p
+
 <img width="460" height="306" alt="image" src="https://github.com/user-attachments/assets/b567cb81-e794-4d28-a1a2-f17660475099" />
 
 `vsl{sof0_height_override}`
