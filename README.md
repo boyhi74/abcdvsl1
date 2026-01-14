@@ -41,14 +41,21 @@ xxd -l 40 final.jpg
 Payload bắt đầu sau 4 byte.
 dd if=final.jpg of=app15_payload.bin bs=1 skip=24 count=393 status=none
 xxd -l 32 app15_payload.bin
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4d8048ff-e6a2-41a1-8c47-de0829b93736" />
+<img width="724" height="440" alt="image" src="https://github.com/user-attachments/assets/3fb51a5d-85bf-4d79-aca0-1f04b3ccb376" />
+
+## Bỏ “LV4APP15|” để lấy blob thật
+Cắt bỏ 9 byte đầu:
+dd if=app15_payload.bin of=blob.bin bs=1 skip=9 status=none
+<img width="688" height="347" alt="image" src="https://github.com/user-attachments/assets/3811c64f-3eb5-48cf-be69-cd72e4dcf59b" />
 
 ## 🔐 3. AES decrypt
 openssl enc -d -aes-256-cbc -pbkdf2 -in blob.bin -out recovered.zip -k h31lh7_l1i3s
+
 ## 📦 4. ZIP
 unzip recovered.zip
-## 🔎 5. Flag
 
+## 🔎 5. Flag
 echo "$(cat p1.txt)$(cat p2.txt)" | xxd -r -p
+<img width="460" height="306" alt="image" src="https://github.com/user-attachments/assets/b567cb81-e794-4d28-a1a2-f17660475099" />
 
 `vsl{sof0_height_override}`
